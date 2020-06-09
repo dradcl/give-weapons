@@ -9,34 +9,42 @@ void PluginInit()
 // Define console commands
 CConCommand give("givewep", "Grants the player a weapon of their choice", @CnsCmd);
 
-array<string> weapons = {
+array<string> weapons = { // * - Special weapon, not included in 'all' command
     "weapon_crowbar",
 	"weapon_9mmhandgun",
 	"weapon_357",
 	"weapon_9mmAR",
+    "weapon_mp5",
+    "weapon_handgrenade",
 	"weapon_crossbow",
 	"weapon_shotgun",
 	"weapon_rpg",
 	"weapon_gauss",
 	"weapon_egon",
-	"weapon_hornetgun",
-	"weapon_uziakimbo",
+    "weapon_hornetgun",
+    "weapon_satchel",
+	"weapon_uzi",
+    "weapon_uziakimbo",
 	"weapon_medkit",
 	"weapon_pipewrench",
 	"weapon_grapple",
 	"weapon_sniperrifle",
 	"weapon_m249",
+    "weapon_tripmine",
+    "weapon_snark",
 	"weapon_m16",
 	"weapon_sporelauncher",
 	"weapon_eagle",
-	"weapon_displacer"
+	"weapon_displacer",
+    "weapon_minigun", // * Does not grant however
+    "weapon_shockrifle" // *
 };
 
 bool GiveWeapon(CBasePlayer@ player, string weapon)
 {
     if (weapon == "all")
     {
-        for(uint i = 0; i < weapons.length(); i++)
+        for(uint i = 0; i < weapons.length() - 2; i++)
         {
             player.GiveNamedItem(weapons[i], 0, 200);
         }
