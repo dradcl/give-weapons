@@ -38,7 +38,7 @@ bool GiveWeapon(CBasePlayer@ player, string weapon)
     {
         for(uint i = 0; i < weapons.length(); i++)
         {
-            GiveWeapon(player, weapons[i]);
+            player.GiveNamedItem(weapons[i], 0, 200);
         }
         return true; // All weapons successfully given
     }
