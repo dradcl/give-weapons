@@ -27,3 +27,10 @@ List of weapons that can be used:
 - weapon_sporelauncher
 - weapon_eagle
 - weapon_displacer
+- weapon_mp5
+- weapon_handgrenade
+- weapon_satchel
+- weapon_uzi
+- weapon_tripmine
+- weapon_snark
+- weapon_shockrifle
